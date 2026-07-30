@@ -1,0 +1,181 @@
+:root {
+  color-scheme: light dark;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: Canvas;
+  color: CanvasText;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
+  padding: 18px;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+input, select, button {
+  font: inherit;
+}
+
+#search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.song-list {
+  display: grid;
+  gap: 6px;
+}
+
+.song-item {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+
+.song-item:hover,
+.song-item.active {
+  border-color: currentColor;
+}
+
+.song-title {
+  font-weight: 700;
+}
+
+.song-artist {
+  opacity: .7;
+  font-size: .9rem;
+}
+
+.main {
+  min-width: 0;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 22px;
+  border-bottom: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
+  position: sticky;
+  top: 0;
+  background: Canvas;
+  z-index: 5;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+}
+
+.meta {
+  opacity: .75;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+button, select {
+  padding: 8px 10px;
+}
+
+#transposeLabel {
+  min-width: 36px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.content {
+  padding: 24px;
+}
+
+.empty {
+  opacity: .7;
+}
+
+.section {
+  margin-bottom: 28px;
+  break-inside: avoid;
+}
+
+.section h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-bottom: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
+  padding-bottom: 6px;
+}
+
+.progression {
+  font-size: 1.35rem;
+  line-height: 1.8;
+  word-spacing: .5rem;
+}
+
+.line {
+  white-space: pre-wrap;
+  min-height: 1.2em;
+}
+
+.chord-line {
+  font-weight: 700;
+}
+
+.raw {
+  white-space: pre-wrap;
+}
+
+@media (max-width: 800px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
+  }
+
+  .toolbar {
+    position: static;
+    flex-direction: column;
+  }
+}
+
+@media print {
+  .sidebar, .controls {
+    display: none;
+  }
+
+  .app {
+    display: block;
+  }
+
+  .toolbar {
+    position: static;
+  }
+}

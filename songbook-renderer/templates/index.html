@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Songbook Renderer</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">Songbook</div>
+      <input id="search" type="search" placeholder="Search songs">
+      <div id="songList" class="song-list"></div>
+    </aside>
+
+    <main class="main">
+      <header class="toolbar">
+        <div>
+          <h1 id="title">Drop JSON files into the songs folder</h1>
+          <div id="meta" class="meta"></div>
+        </div>
+
+        <div class="controls">
+          <button id="minus">−1</button>
+          <span id="transposeLabel">0</span>
+          <button id="plus">+1</button>
+          <button id="reset">Reset</button>
+          <select id="viewMode">
+            <option value="lyrics">Lyrics + chords</option>
+            <option value="compact">Compact</option>
+            <option value="raw">Raw</option>
+          </select>
+        </div>
+      </header>
+
+      <section id="content" class="content empty">
+        Add exported song JSON files to <code>songs/</code>, then refresh.
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

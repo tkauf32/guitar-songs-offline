@@ -1,0 +1,13 @@
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local song data
+songbook-renderer/songs
+
+# Local/archive content
+archive/
