@@ -2,6 +2,8 @@
 
 Two small local tools for building and browsing a personal song library.
 
+<img width="1512" height="904" alt="Screenshot 2026-07-30 at 11 06 22 AM" src="https://github.com/user-attachments/assets/2c0697a9-8957-4284-8aa6-596563b5c50b" />
+
 ## What is here
 
 - `song-object-extractor/`: unpacked Chrome extension that saves the visible chord sheet in the current tab as structured JSON
