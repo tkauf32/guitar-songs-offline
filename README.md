@@ -8,6 +8,7 @@ Two small local tools for building and browsing a personal song library.
 
 - `song-object-extractor/`: unpacked Chrome extension that saves the visible chord sheet in the current tab as structured JSON
 - `songbook-renderer/`: tiny Flask app that reads those JSON files and serves a local browser-based songbook
+- `esp32-songbook/`: first-pass Arduino-compatible e-paper prototype that compacts those JSON files for an ESP32 song reader
 
 ## Quick start
 

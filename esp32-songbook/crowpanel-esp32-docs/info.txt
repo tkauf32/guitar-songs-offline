@@ -1,0 +1,14 @@
+# Docs URL
+```text
+https://www.elecrow.com/wiki/CrowPanel_ESP32_E-Paper_HMI_2.13-inch_Display.html
+```
+
+# Hardware Interface Pinouts
+```text
+1.54-inch Display Port	Pin Number
+MENU Button	IO2
+Rotary Switch	Down(IO4); Up(IO6); CONF(IO5)
+EXIT Button	IO1
+GPIO_D	IO40\IO41
+```
+
